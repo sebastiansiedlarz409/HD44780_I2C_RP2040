@@ -16,6 +16,16 @@ int main() {
 
     LCD_Begin(i2c0,0x27, 2, 16, 1, 1);
 
+    LCD_SendString("AHOJ");
+    sleep_ms(2000);
+    LCD_TurnOff();
+    sleep_ms(2000);
+    LCD_TurnOn(1);
+    LCD_SetCursorPosition(1, 8);
+
+    sleep_ms(2000);
+    LCD_CursorOff();
+
     while(1){
 
     }
