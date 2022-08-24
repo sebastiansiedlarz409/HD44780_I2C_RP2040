@@ -4,6 +4,12 @@
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 
+i2c_inst_t* lcd_hi2c;
+uint8_t lcd_address;
+uint8_t lcd_rows;
+uint8_t lcd_columns;
+uint8_t lcd_data;
+
 uint8_t LCD_Begin(i2c_inst_t* hi2c, uint8_t address, uint8_t rows, uint8_t columns, uint8_t blink, uint8_t backlight){
 	uint8_t status = 0;
 
